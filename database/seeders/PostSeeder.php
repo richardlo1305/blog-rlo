@@ -19,14 +19,18 @@ class PostSeeder extends Seeder
 
         foreach($posts as $post)
         {
-            Image::factory(1)->create([
-                'imageable_id' => $post->id,
-                'imageable_type' => Post::class
-            ]);
 
             $post->tags()->attach([
                 rand(1,4),
                 rand(5,8)
+            ]);
+        }
+
+        foreach($posts as $post)
+        {
+            Image::factory(1)->create([
+                'imageable_id' => $post->id,
+                'imageable_type' => Post::class
             ]);
         }
     }
