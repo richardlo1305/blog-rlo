@@ -39,5 +39,6 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'admin.posts.show'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'admin.posts.edit'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'admin.posts.destroy'])->syncRoles([$role1, $role2]);
+        Permission::create(['name' => 'admin.posts.store'])->syncRoles([$role1, $role2]);
     }
 }

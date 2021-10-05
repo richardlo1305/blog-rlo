@@ -11,17 +11,17 @@ class PostRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    /* public function authorize()
     {
-        /* if($this->user_id == auth()->user()->id)
+        if($this->user_id == auth()->user()->id)
         {
             return true;
         }
         else
         {
             return false;
-        } */
-    }
+        }
+    } */
 
     /**
      * Get the validation rules that apply to the request.
@@ -31,8 +31,8 @@ class PostRequest extends FormRequest
     public function rules()
     {
 
-        $post = $this->route()->parameter('post');
-
+        //$post = $this->route()->parameter('post');
+        
         $rules = [
             'name' => 'required',
             'slug' => 'required|unique:posts',
